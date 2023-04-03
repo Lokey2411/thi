@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+ul li{
+  list-style: none;
+}
+.line{
+  display: flex;
+}
+.head{
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  /* margin: auto; */
+  margin-bottom: 10px;
+}
+.head input,.head button{
+  border: 1px solid #ccc;
+  padding: 4px; 
+}
+.head button{
+  color: #ff0000;
+  margin-left: 4px;
+  margin-right: 40px;
+}
+.name{
+  display: flex;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+.search{
+  margin-top: 8px;
+}
+.upper{
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #000;
+  margin-left: 50px;
+}
+.normal{
+  line-height: 40px;
+}
+.nav{
+  background: orangered;
+}
+.nav li{
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+.nav li:hover{
+  background: #ccc;
+}
+.nav li a{
+  color: #000;
+  text-decoration: none;
+}
+.nav .not-last{
+  border-right:1px solid #000 ;
+}
+.nav .first{
+  margin-left: 20px;
+}
+.content{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.content img{
+  width: 75%;
+  height: 200px;
+}
+.left{
+  width: 80%;
+  margin-top: 10px;
+}
+.product{
+  width: 100%;
+  height: 30px;
+  background: #ccc;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 15px;
+}
+.content .left ul li{
+  width: 35%;
+  border: 1px solid #ccc;
+  margin: 5px;
+  color: #ff0000;
+}
+.right{
+  width: 20%;
+  margin-left: 10px;
+}
+.product-list{
+  width: 100%;
+  margin-top: 10px;
+}
+.product-list li{
+  background: #ccc;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border: 1px solid #000;
+}
+.product-list img{
+  width: 50px;
+  height: 20px;
+  /* left: 20px; */
+  /* float: right; */
+}
+.cart{
+  width: 100%;
+  background: #ccc;
+  color: #fff;
+}
+.cart>div{
+  padding: 10px;
+}
+.cart .heading{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.branches img{
+  width: 48%;
+  height: 75px;
+
+}
+img.left{
+  margin: 0;
+  margin-right: 10px;
+}
+.footer img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* top: 90%; */
+  width: 100%;
+  height: 70px;
+}
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  animation: fadein ease 1s;
+}
+.modal .container{
+  position: absolute;
+  bottom: 5%;
+  top:5%;
+  left: 15%;
+  right:15%;
+
+}
+.modal .box{
+  width:100%;
+  height: fit-content;
+  min-height: 70%;
+  /* height: 470px; */
+  background-color: #fff;
+}
+.modal .content{
+  margin: 0;
+}
+.modal .header{
+  width:100%;
+  background-color: deepskyblue!important;
+  color:#fff;
+  text-align: center;
+  line-height: 132px;
+  font-size:25px;
+  text-transform: uppercase;
+}
+.modal ul{
+  width: 100%;
+}
+.modal li{
+  justify-content: center;
+}
+.row-2 input{
+  width: 45%!important;
+  margin-right: 10px;
+}
+.modal select{
+  color: #ccc;
+}
+.modal input[type = "text"],.modal select{
+  width: 92%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 8px;
+}
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+#content{
+  height: 100px;
+}
+#content::placeholder{
+  transform: translateY(-250%);
+}
+.check-box{
+  margin-top: 10px;
+  border-radius: 0;
+}
+.modal input[type = "checkbox"]{
+  margin-right: 8px;
+}
+.check-box a{
+  text-decoration: none;
+  margin-left: 4px;
+  color: deepskyblue;
+}
+.modal button{
+  width: 10%;
+  height: 30px;
+  background: deepskyblue;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal button:hover{
+  opacity: 0.4;
+}
+.force{
+  margin-left: 4%;
+  padding-bottom: 10px;
+}
+@keyframes fadein{
+  from{
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
