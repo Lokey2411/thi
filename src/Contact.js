@@ -17,7 +17,8 @@ const Contact = () => {
          return true;
       }
       function isPasswordElement(str){
-         return (str<='Z'&&str>='A')||(str<='z'&&str>='a')||(str.isNumber());
+                  return (str<='Z'&&str>='A')||(str<='z'&&str>='a')||(isNumber(str));
+
       
       }
       function isNumber(str){
