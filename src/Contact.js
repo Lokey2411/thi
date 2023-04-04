@@ -94,8 +94,7 @@ const Contact = () => {
          return;
       }
       else{
-         document.getElementsByClassName('error')[1].style.display = 'block';
-
+         document.getElementsByClassName('error')[1].style.display = 'none';
       }
       for(let i=0;i<2;++i){
          if(!input[i].value){

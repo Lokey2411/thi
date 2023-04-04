@@ -29,9 +29,9 @@ button{
 .line{
     display: flex;
 }
-.background{
+/* .background{
     background: url('') top center/cover no-repeat;
-}
+} */
 .upper{
     text-transform: uppercase;
 }
