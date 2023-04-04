@@ -52,13 +52,7 @@ const Contact = () => {
       
       var input = document.querySelectorAll('input');
   
-      var n = input.length;
-      function phoneValidate(elem){
-          return elem.startsWith('0')
-          && elem.length == 10
-          && elem.isNumber()
-          ;
-      }
+      let n = input.length;
       
       function nameValidate(str){
           str = removeVietnameseTones(str);
