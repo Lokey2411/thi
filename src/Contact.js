@@ -1,26 +1,29 @@
 import './Contact.css'
 
-String.prototype.isNumber = function(){
-    return Number(this) === this;
-}
 
-String.prototype.isAlphaChar = function(){
-    return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this===' ';
-}
-
-String.prototype.isAlpha = function(){
-    let n = this.length;
-
-    for(let i=0;i<n;++i){
-        if(!(this.charAt(i).isAlphaChar()))return false;
-    }
-    return true;
-}
-String.prototype.isPasswordElement = function(){
-   return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||(this.isNumber());
-}
 const Contact = () => {
    var click =function(){
+      function isAlphaChar(this){
+         return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this===' ';
+      
+      }
+      
+      function isAlpha(this){
+         let n = this.length;
+         
+         for(let i=0;i<n;++i){
+             if(!(isAlphaChar(this.charAt(i))))return false;
+         }
+         return true;
+      }
+      function isPasswordElement(this){
+         return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||(this.isNumber());
+      
+      }
+      function isNumber(this){
+         return Number(this) === this;
+      
+      }
       function removeVietnameseTones(str) {
           str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
           str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g,"e"); 
@@ -54,7 +57,7 @@ const Contact = () => {
         
       function nameValidate(str){
           str = removeVietnameseTones(str);
-          return str.isAlpha();
+          return isAlpha(str);
       }
       for(let i=0;i<2;++i){
          if(!input[i].value){
@@ -69,7 +72,7 @@ const Contact = () => {
       function passwordValidate(str){
          if(str.length<8)return false;
          for(let i=0;i<str.length;++i){
-            if(!str.charAt(i).isPasswordElement())return false;
+            if(!isPasswordElement(str))return false;
          }
          return true;
       }
