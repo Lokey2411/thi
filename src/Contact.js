@@ -3,25 +3,25 @@ import './Contact.css'
 
 const Contact = () => {
    var click =function(){
-      function isAlphaChar(this){
-         return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this===' ';
+      function isAlphaChar(str){
+         return (str<='Z'&&str>='A')||(str<='z'&&str>='a')||str===' ';
       
       }
       
-      function isAlpha(this){
-         let n = this.length;
+      function isAlpha(str){
+         let n = str.length;
          
          for(let i=0;i<n;++i){
-             if(!(isAlphaChar(this.charAt(i))))return false;
+             if(!(isAlphaChar(str.charAt(i))))return false;
          }
          return true;
       }
-      function isPasswordElement(this){
-         return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||(this.isNumber());
+      function isPasswordElement(str){
+         return (str<='Z'&&str>='A')||(str<='z'&&str>='a')||(str.isNumber());
       
       }
-      function isNumber(this){
-         return Number(this) === this;
+      function isNumber(str){
+         return Number(str) === str;
       
       }
       function removeVietnameseTones(str) {
