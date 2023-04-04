@@ -1,25 +1,25 @@
 import './Contact.css'
 
+String.prototype.isNumber = function(){
+    return Number(this) === this;
+}
+
+String.prototype.isAlphaChar = function(){
+    return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this===' ';
+}
+
+String.prototype.isAlpha = function(){
+    let n = this.length;
+
+    for(let i=0;i<n;++i){
+        if(!(this.charAt(i).isAlphaChar()))return false;
+    }
+    return true;
+}
+String.prototype.isPasswordElement = function(){
+   return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||(this.isNumber());
+}
 const Contact = () => {
-   String.prototype.isNumber = function(){
-       return Number(this) == this;
-   }
-
-   String.prototype.isAlphaChar = function(){
-       return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||this===' ';
-   }
-
-   String.prototype.isAlpha = function(){
-       let n = this.length;
-
-       for(let i=0;i<n;++i){
-           if(!(this.charAt(i).isAlphaChar()))return false;
-       }
-       return true;
-   }
-   String.prototype.isPasswordElement = function(){
-      return (this<='Z'&&this>='A')||(this<='z'&&this>='a')||(this.isNumber());
-   }
    var click =function(){
       function removeVietnameseTones(str) {
           str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g,"a"); 
